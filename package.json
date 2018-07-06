@@ -16,12 +16,12 @@
     "type": "git",
     "url": "https://github.com/redew97/brobot"
   },
-  "keywords": [
+  "keywords": {
     "node",
     "heroku",
     "express"
-  ],
-   "data": [
+  },
+   "data": {
         "type" : "gif",
         "id" : "feqkVgjJpYtjy",
         "slug" : "eyes-shocked-bird-feqkVgjJpYtjy",
@@ -56,6 +56,6 @@
         "status" : 200,
         "msg" : "OK"
     }
-  ],
+   },
   "license": "MIT"
 }
