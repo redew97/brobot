@@ -2,6 +2,8 @@ var HTTPS = require('https');
 
 var botID = process.env.BOT_ID;
 
+var request = require("request");
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex =  /^bro/i;
@@ -9,6 +11,39 @@ function respond() {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
+    
+    module.exports = function (bot, message) {
+    request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
+      var data = JSON.parse(body);
+
+      var max = data.data.length;
+      var min = 0;
+
+      var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+
+      gifUrl = data.data[randomNumber].images.downsized.url;
+
+      replyMessage = "I don't think you know what you're saying\n" + gifUrl;
+
+      bot.reply(message, replyMessage);
+});
+      
+      //Remove "working on it" reaction
+    bot.api.reactions.remove({timestamp: message.ts, channel: message.channel, name: 'thinking_face'},function(err,res) {
+      if (err) {
+        bot.botkit.log("Failed to remove emoji reaction :(",err);
+      }
+    });
+
+    
+    //Add "sorry it failed" reaction
+    bot.api.reactions.add({timestamp: message.ts, channel: message.channel, name: 'slightly_frowning_face'},function(err,res) {
+      if (err) {
+        bot.botkit.log("Failed to add emoji reaction :(",err);
+      }
+    });
+};
+    
     this.res.end();
   } else {
     console.log("don't care");
