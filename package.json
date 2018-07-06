@@ -21,41 +21,6 @@
     "heroku",
     "express"
   ],
-   "data": {
-        "type" : "gif",
-        "id" : "feqkVgjJpYtjy",
-        "slug" : "eyes-shocked-bird-feqkVgjJpYtjy",
-        "url" : "http://giphy.com/gifs/eyes-shocked-bird-feqkVgjJpYtjy",
-        "bitly_gif_url" : "http://gph.is/XJ200y",
-        "bitly_url" : "http://gph.is/XJ200y",
-        "embed_url" : "http://giphy.com/embed/feqkVgjJpYtjy",
-        "username" : "",
-        "source" : "http://littleanimalgifs.tumblr.com/post/17994517807",
-        "rating" : "g",
-        "caption" : "",
-        "content_url" : "",
-        "source_tld" : "littleanimalgifs.tumblr.com",
-        "source_post_url" : "http://littleanimalgifs.tumblr.com/post/17994517807",
-        "import_datetime" : "2013-03-21 04:03:08",
-        "trending_datetime" : "2014-11-12 06:22:52",
-        "images" : [
-            "original" : {
-                "url" : "http://media0.giphy.com/media/feqkVgjJpYtjy/giphy.gif",
-                "width" : "334",
-                "height" : "150",
-                "size" : "511581",
-                "frames" : "27",
-                "mp4" : "http://media0.giphy.com/media/feqkVgjJpYtjy/giphy.mp4",
-                "mp4_size" : "97841",
-                "webp" : "http://media0.giphy.com/media/feqkVgjJpYtjy/giphy.webp",
-                "webp_size" : "270108"
-        },
-        "title" : "Shocked Eyes GIF",
-    ],
-    "meta" : {
-        "status" : 200,
-        "msg" : "OK"
-    }
-   },
+   
   "license": "MIT"
 }
