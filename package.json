@@ -38,7 +38,7 @@
         "source_post_url" : "http://littleanimalgifs.tumblr.com/post/17994517807",
         "import_datetime" : "2013-03-21 04:03:08",
         "trending_datetime" : "2014-11-12 06:22:52",
-        "images" : {
+        "images" : [
             "original" : {
                 "url" : "http://media0.giphy.com/media/feqkVgjJpYtjy/giphy.gif",
                 "width" : "334",
@@ -51,7 +51,7 @@
                 "webp_size" : "270108"
         },
         "title" : "Shocked Eyes GIF",
-    },
+    ],
     "meta" : {
         "status" : 200,
         "msg" : "OK"
