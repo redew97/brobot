@@ -12,20 +12,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage();
     
-    //module.exports = function (bot, message) {
-      //request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
-  //    request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
-  //    var data = JSON.parse(body);
-
-   //   var max = data.data.length;
-    //  var min = 0;
-
-   //   var randomNumber = Math.floor(Math.random() * (max - min)) + min;
-
-   //   gifUrl = data.data[randomNumber].images.downsized.url;
-
-      "replyMessage": "I don't think you know what you're saying\n" + "https://media.giphy.com/media/4FIj8fevJkFNK/giphy.gif";
-
+    
       bot.reply(message, replyMessage);
 });
       
@@ -43,7 +30,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "Hell yeah, brother!!";
+  botResponse = "Hell yeah, brother!!" + https://media.giphy.com/media/4FIj8fevJkFNK/giphy.gif;
 
   options = {
     hostname: 'api.groupme.com',
