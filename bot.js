@@ -30,7 +30,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "Hell yeah, brother!!" + https://media.giphy.com/media/4FIj8fevJkFNK/giphy.gif;
+  botResponse = "Hell yeah, brother!!";
 
   options = {
     hostname: 'api.groupme.com',
