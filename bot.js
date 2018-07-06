@@ -3,8 +3,8 @@ var HTTPS = require('https');
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex =  /bro/i;
+ // var request = JSON.parse(this.req.chunks[0]),
+  var botRegex =  /bro/i;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
