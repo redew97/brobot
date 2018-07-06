@@ -3,11 +3,10 @@ var HTTPS = require('https');
 var botID = process.env.BOT_ID;
 
 function respond() {
- // var request = JSON.parse(this.req.chunks[0]),
-  var botRegex =  /bro/i;
+  var request = JSON.parse(this.req.chunks[0]),
+      botRegex =  /bro/i;
 
-//  if(request.text && botRegex.test(request.text)) {
-  if(botRegex.test(request.text)) {
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -37,7 +36,7 @@ function postMessage() {
   console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
+      if(res.statusCode == 200) {
         //neat
       } else {
         console.log('rejecting bad status code ' + res.statusCode);
