@@ -13,17 +13,18 @@ function respond() {
     postMessage();
     
     module.exports = function (bot, message) {
-    request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
+      //request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
+      request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
       var data = JSON.parse(body);
 
-      var max = data.data.length;
-      var min = 0;
+   //   var max = data.data.length;
+    //  var min = 0;
 
-      var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+   //   var randomNumber = Math.floor(Math.random() * (max - min)) + min;
 
-      gifUrl = data.data[randomNumber].images.downsized.url;
+   //   gifUrl = data.data[randomNumber].images.downsized.url;
 
-      replyMessage = "I don't think you know what you're saying\n" + gifUrl;
+      replyMessage = "I don't think you know what you're saying\n" + "https://media.giphy.com/media/4FIj8fevJkFNK/giphy.gif";
 
       bot.reply(message, replyMessage);
 });
