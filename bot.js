@@ -12,10 +12,10 @@ function respond() {
     this.res.writeHead(200);
     postMessage();
     
-    module.exports = function (bot, message) {
+    //module.exports = function (bot, message) {
       //request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
-      request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
-      var data = JSON.parse(body);
+  //    request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
+  //    var data = JSON.parse(body);
 
    //   var max = data.data.length;
     //  var min = 0;
@@ -24,25 +24,12 @@ function respond() {
 
    //   gifUrl = data.data[randomNumber].images.downsized.url;
 
-      replyMessage = "I don't think you know what you're saying\n" + "https://media.giphy.com/media/4FIj8fevJkFNK/giphy.gif";
+      "replyMessage": "I don't think you know what you're saying\n" + "https://media.giphy.com/media/4FIj8fevJkFNK/giphy.gif";
 
       bot.reply(message, replyMessage);
 });
       
-      //Remove "working on it" reaction
-    bot.api.reactions.remove({timestamp: message.ts, channel: message.channel, name: 'thinking_face'},function(err,res) {
-      if (err) {
-        bot.botkit.log("Failed to remove emoji reaction :(",err);
-      }
-    });
-
-    
-    //Add "sorry it failed" reaction
-    bot.api.reactions.add({timestamp: message.ts, channel: message.channel, name: 'slightly_frowning_face'},function(err,res) {
-      if (err) {
-        bot.botkit.log("Failed to add emoji reaction :(",err);
-      }
-    });
+     
 };
     
     this.res.end();
